@@ -1,0 +1,26 @@
+:host {
+	width: fit-content;
+	height: fit-content;
+	display: block;
+}
+
+div {
+	cursor: pointer;
+	transition: .5s;
+	background-color: #25d366;
+
+	padding: 1.1rem;
+	border-radius: 100%;
+	position: fixed;
+	bottom: 2rem;
+	right: 2rem;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: #333138;
+
+	&:hover {
+		transform: scale(1.1) rotateZ(720deg);
+	}
+}

@@ -1,0 +1,40 @@
+<section id="talk-with-me">
+	<h2>Fale comigo</h2>
+	<form [formGroup]="form" (ngSubmit)="onSubmit()" class="example-form">
+		<div class="first-line">
+			<mat-form-field>
+				<mat-label>Nome</mat-label>
+				<input formControlName="name" matInput placeholder="Informe aqui o seu nome">
+				<mat-error>
+					@if (form.controls.email.errors?.['required']) {
+						Este campo é obrigatório
+					}
+				</mat-error>
+			</mat-form-field>
+
+			<mat-form-field>
+				<mat-label>E-mail</mat-label>
+				<input formControlName="email" matInput placeholder="Ex: nome@dominio.com">
+				<mat-error>
+					@if (form.controls.email.errors?.['required']) {
+						Este campo é obrigatório
+					} @else if (form.controls.email.errors?.['email']) {
+						E-mail inválido
+					}
+				</mat-error>
+			</mat-form-field>
+		</div>
+
+		<mat-form-field>
+			<mat-label>Deixe uma mensagem</mat-label>
+			<textarea formControlName="description" [rows]="7" matInput placeholder="Ex: Olá, Samuel! Como vai?"></textarea>
+		</mat-form-field>
+
+		<button
+			[disabled]="form.invalid"
+			type="submit" color="accent" mat-raised-button>
+			Enviar
+		</button>
+	</form>
+</section>
+

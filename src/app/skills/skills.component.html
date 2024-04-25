@@ -1,0 +1,14 @@
+<div id="skills" class="info">
+	<h2>Habilidades</h2>
+
+	<div class="list">
+		@for (skill of skills; track skill) {
+			<div class="list__item">
+				<img [ngSrc]="skill.icon" width="75" height="75">
+
+				<p>{{skill.text}}</p>
+
+			</div>
+		}
+	</div>
+ </div>

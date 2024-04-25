@@ -1,0 +1,21 @@
+<div id="projects" class="info">
+	<h2>Projetos</h2>
+
+	<div class="info__background">
+		<div class="list">
+			@for (project of projects; track project; let index = $index) {
+				<a [href]="project.link" target="_blank" class="list__item">
+					<img [src]="project.cover + '?' + index" [alt]="project.name">
+
+					<div class="project-info">
+						<h3>{{ project.name }}</h3>
+
+						<p>{{project.description}}</p>
+
+						Clique para ver mais
+					</div>
+				</a>
+			}
+		</div>
+	</div>
+</div>

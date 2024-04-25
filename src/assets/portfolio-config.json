@@ -1,0 +1,11 @@
+{
+	"projects": {
+		"list": [
+			{
+				"name": "What to do",
+				"description": "Um projeto bacana",
+				"cover": "assets/illustrations/projects/what-to-do/cover.png"
+			}
+		]
+	}
+}
